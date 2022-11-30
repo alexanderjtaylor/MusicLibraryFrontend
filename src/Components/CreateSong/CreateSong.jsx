@@ -18,7 +18,8 @@ const CreateSong = (props) => {
             releaseDate: releaseDate,
             genre: genre
         };
-        props.addNewSongProp(newSong);
+        props.postNewSong(newSong)
+        props.addNewSong(newSong);
     }
 
     return ( 

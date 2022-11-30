@@ -1,5 +1,5 @@
 
-const MusicTable = (props) => {
+const DisplayMusic = (props) => {
     return ( 
         <table>
           <thead>
@@ -30,4 +30,4 @@ const MusicTable = (props) => {
      );
 }
  
-export default MusicTable;
+export default DisplayMusic;
