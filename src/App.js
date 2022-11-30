@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MusicTable from './Components/MusicTable/MusicTable';
+import CreateSong from './Components/CreateSong/CreateSong';
 
 
 function App() {
@@ -17,9 +18,15 @@ function App() {
     setSongs(response.data)
   }
 
+  function addNewSong(song){
+    let tempSong = [...songs, song];
+    setSongs(tempSong)
+  }
+
   return (
     <div>
       <MusicTable parentSongs = {songs} />
+      <CreateSong addNewSongProp = {addNewSong}/>
     </div>
   );
 }
