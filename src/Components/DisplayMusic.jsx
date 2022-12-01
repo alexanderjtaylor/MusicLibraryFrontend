@@ -1,27 +1,28 @@
 
+
 const DisplayMusic = (props) => {
     return ( 
-        <table>
+        <table className='prop-tabel'>
           <thead>
             <tr>
-              <th>Song Order</th>
-              <th>Title</th>
-              <th>Artist</th>
-              <th>Album</th>
-              <th>Release Date</th>
-              <th>Genre</th>
+              <th className='prop-labels'>Song Order</th>
+              <th className='prop-labels'>Title</th>
+              <th className='prop-labels'>Artist</th>
+              <th className='prop-labels'>Album</th>
+              <th className='prop-labels'>Release Date</th>
+              <th className='prop-labels'>Genre</th>
             </tr>
           </thead>
           <tbody>
             {props.parentSongs.map((song, index) => {
               return (
                 <tr>
-                  <td>{index + 1}</td>
-                  <td>{song.title}</td>
-                  <td>{song.artist}</td>
-                  <td>{song.album}</td>
-                  <td>{song.release_date}</td>
-                  <td>{song.genre}</td>
+                  <td className='prop-values'>{index + 1}</td>
+                  <td className='prop-values'>{song.title}</td>
+                  <td className='prop-values'>{song.artist}</td>
+                  <td className='prop-values'>{song.album}</td>
+                  <td className='prop-values'>{song.release_date}</td>
+                  <td className='prop-values'>{song.genre}</td>
                 </tr>
               );
             })}

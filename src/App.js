@@ -26,6 +26,12 @@ function App() {
     getAllSongs()
   }
 
+  // async function editNewSong(fixedSong){
+  //   const response = await axios.put('http://127.0.0.1:8000/music/', fixedSong)
+  //   console.log(response.data)
+  //   getAllSongs()
+  // }
+
   function searchSong(searchTerm){
     let searchUserSong = songs.includes(searchTerm);
     setSongs(searchUserSong)
@@ -33,10 +39,13 @@ function App() {
 
   return (
     <div>
-      <SearchBar searchSong = {searchSong} />
       <div className='col-md-8'>
-        <div className='border-box'><DisplayMusic parentSongs = {songs} /></div>
-        <div className='border-box'><CreateSong postNewSong = {postNewSong}/></div>
+        <div className='border-box'>
+          <h3 className='music-title'>Music Library</h3>
+          <SearchBar searchSong = {searchSong} />
+          <DisplayMusic parentSongs = {songs} />
+          <h3 className='add-title'>Add to Library</h3>
+          <CreateSong postNewSong = {postNewSong}/></div>
       </div>
     </div>
   );

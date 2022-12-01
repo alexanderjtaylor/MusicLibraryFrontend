@@ -23,17 +23,19 @@ const CreateSong = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit}>
-            <label>Title</label>
-            <input type='text' value={title} onChange={(event) => setTitle(event.target.value)}/>
-            <label>Artist</label>
-            <input type='text' value={artist} onChange={(event) => setArtist(event.target.value)}/>
-            <label>Album</label>
-            <input type='text' value={album} onChange={(event) => setAlbum(event.target.value)}/>
-            <label>Release Date</label>
-            <input type='date' value={release_date} onChange={(event) => setReleaseDate(event.target.value)}/>
-            <label>Genre</label>
-            <input type='text' value={genre} onChange={(event) => setGenre(event.target.value)}/>
-            <button type='submit'>Add Song</button>
+            <div className='creating-wrapper'>
+                <label className='adding-label'>Title</label>
+                <input type='text' className='adding-box' value={title} onChange={(event) => setTitle(event.target.value)}/>
+                <label className='adding-label'>Artist</label>
+                <input type='text' className='adding-box' value={artist} onChange={(event) => setArtist(event.target.value)}/>
+                <label className='adding-label'>Album</label>
+                <input type='text' className='adding-box' value={album} onChange={(event) => setAlbum(event.target.value)}/>
+                <label className='adding-label'>Release Date</label>
+                <input type='date' className='adding-box' value={release_date} onChange={(event) => setReleaseDate(event.target.value)}/>
+                <label className='adding-label'>Genre</label>
+                <input type='text' className='adding-box' value={genre} onChange={(event) => setGenre(event.target.value)}/>
+                <button type='submit' className='add-btn'>Add Song</button>
+            </div>
         </form>
      );
 }
