@@ -6,7 +6,7 @@ const CreateSong = (props) => {
     const [title, setTitle] = useState('')
     const [artist, setArtist] = useState('')
     const [album, setAlbum] = useState('')
-    const [releaseDate, setReleaseDate] = useState('')
+    const [release_date, setReleaseDate] = useState('')
     const [genre, setGenre] = useState('')
 
     function handleSubmit(event) {
@@ -15,11 +15,10 @@ const CreateSong = (props) => {
             title: title,
             artist: artist,
             album: album,
-            releaseDate: releaseDate,
+            release_date: release_date,
             genre: genre
         };
         props.postNewSong(newSong)
-        props.addNewSong(newSong);
     }
 
     return ( 
@@ -31,7 +30,7 @@ const CreateSong = (props) => {
             <label>Album</label>
             <input type='text' value={album} onChange={(event) => setAlbum(event.target.value)}/>
             <label>Release Date</label>
-            <input type='date' value={releaseDate} onChange={(event) => setReleaseDate(event.target.value)}/>
+            <input type='date' value={release_date} onChange={(event) => setReleaseDate(event.target.value)}/>
             <label>Genre</label>
             <input type='text' value={genre} onChange={(event) => setGenre(event.target.value)}/>
             <button type='submit'>Add Song</button>

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
-import CreateSong from './Components/CreateSong/CreateSong';
-import SearchBar from './Components/DisplayMusic/SearchBar';
+import DisplayMusic from './Components/DisplayMusic';
+import CreateSong from './Components/CreateSong';
+import SearchBar from './Components/SearchBar';
+import './App.css';
 
 
 function App() {
@@ -22,11 +23,7 @@ function App() {
   async function postNewSong(newSong){
     const response = await axios.post('http://127.0.0.1:8000/music/', newSong)
     console.log(response.data)
-  }
-
-  function addNewSong(song){
-    let tempSong = [...songs, song];
-    setSongs(tempSong)
+    getAllSongs()
   }
 
   function searchSong(searchTerm){
@@ -37,8 +34,10 @@ function App() {
   return (
     <div>
       <SearchBar searchSong = {searchSong} />
-      <DisplayMusic parentSongs = {songs} />
-      <CreateSong addNewSong = {addNewSong} postNewSong = {postNewSong}/>
+      <div className='col-md-8'>
+        <div className='border-box'><DisplayMusic parentSongs = {songs} /></div>
+        <div className='border-box'><CreateSong postNewSong = {postNewSong}/></div>
+      </div>
     </div>
   );
 }
