@@ -13,7 +13,7 @@ const SearchBar = (props) => {
             else{
                 return false;
             }});
-        return props.setSongs(response)
+        props.setSongs(response)
     }
 
     return ( 

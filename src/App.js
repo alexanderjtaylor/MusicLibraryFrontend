@@ -32,17 +32,12 @@ function App() {
   //   getAllSongs()
   // }
 
-  function searchSong(searchTerm){
-    let searchUserSong = songs.includes(searchTerm);
-    setSongs(searchUserSong)
-  }
-
   return (
     <div>
       <div className='col-md-8'>
         <div className='border-box'>
           <h3 className='music-title'>Music Library</h3>
-          <SearchBar searchSong = {searchSong} />
+          <SearchBar songs = {songs} setSongs = {setSongs}/>
           <DisplayMusic parentSongs = {songs} />
           <h3 className='add-title'>Add to Library</h3>
           <CreateSong postNewSong = {postNewSong}/></div>
