@@ -5,11 +5,13 @@
     margin: .25em;
     padding: .25em;
     border-radius: 5px 5px;
+    background-color: rgba(84, 149, 218, 0.463);
 }
 
 .music-title{
     margin: auto;
     text-align: center;
+    font-size: x-large;
     margin-top: 10px;
     margin-bottom: 5px;
 }
@@ -17,24 +19,26 @@
 .add-title{
     margin: auto;
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 1px;
+    font-size: x-large;
+    margin-top: 55px;
+    margin-bottom: 5px;
 }
 
 .entire-search-bar{
     display: table;
-    margin: auto;
-    width: 20%;
+    margin-left: 25%;
+    width: 60%;
+    font-size: 1vw;
 }
 
 .search-box{
     display: table-cell;
-    width: 200px;
+    width: 60%;
 }
 
 .search-btn{
     display: table-cell;
-    width: 60px;
+    width: 20%;
     margin: 3%;
 }
 
@@ -42,6 +46,8 @@
     display: table;
     margin: auto;
     width: 50%;
+    padding: 5px;
+    font-size: min(max(50px, 1.6vw), 14px);
 }
 
 .prop-labels{
@@ -57,20 +63,34 @@
 
 .creating-wrapper{
     display: table;
-    margin: auto;
-    width: 80%;
+    margin-left: 32%;
+    width: 60%;
+}
+
+.adding-label-n-box{
     padding: 5px;
 }
 
 .adding-label{
-    width: auto;
-    padding: 5px;
+    display: table-cell;
+    width: 5%;
+    padding: 1px;
 }
 
 .adding-box{
-    width: auto;
+    display: table-cell;
+    width: 60%;
 }
 
 .add-btn {
-    margin: 1%;
+    display: table-cell;
+    padding: 2px;
+    margin: 5px;
+}
+
+.delete-btn{
+    display: table-cell;
+    width: 100%;
+    padding: 1px;
+    margin: 5px;
 }

@@ -1,4 +1,4 @@
-
+import Delete from "./Delete";
 
 const DisplayMusic = (props) => {
     return ( 
@@ -14,15 +14,16 @@ const DisplayMusic = (props) => {
             </tr>
           </thead>
           <tbody>
-            {props.parentSongs.map((song, index) => {
+            {props.songs.map((song, index) => {
               return (
-                <tr>
+                <tr key={index + 1}>
                   <td className='prop-values'>{index + 1}</td>
                   <td className='prop-values'>{song.title}</td>
                   <td className='prop-values'>{song.artist}</td>
                   <td className='prop-values'>{song.album}</td>
                   <td className='prop-values'>{song.release_date}</td>
                   <td className='prop-values'>{song.genre}</td>
+                  <Delete songId={song.id} getAllSongs = {props.getAllSongs}/>
                 </tr>
               );
             })}

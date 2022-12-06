@@ -10,7 +10,7 @@ function App() {
 
   const [songs, setSongs] = useState([]);
 
-  useEffect( async () => {
+  useEffect(() => {
     getAllSongs();
   }, []);
 
@@ -26,22 +26,14 @@ function App() {
     getAllSongs()
   }
 
-  // async function editNewSong(fixedSong){
-  //   const response = await axios.put('http://127.0.0.1:8000/music/', fixedSong)
-  //   console.log(response.data)
-  //   getAllSongs()
-  // }
-
   return (
     <div>
-      <div className='col-md-8'>
-        <div className='border-box'>
-          <h3 className='music-title'>Music Library</h3>
-          <SearchBar songs = {songs} setSongs = {setSongs}/>
-          <DisplayMusic parentSongs = {songs} />
-          <h3 className='add-title'>Add to Library</h3>
-          <CreateSong postNewSong = {postNewSong}/></div>
-      </div>
+      <div className='border-box'>
+        <h3 className='music-title'>Music Library</h3>
+        <SearchBar songs = {songs} setSongs = {setSongs}/>
+        <DisplayMusic songs = {songs} getAllSongs = {getAllSongs}/>
+        <h3 className='add-title'>Add to Library</h3>
+        <CreateSong postNewSong = {postNewSong}/></div>
     </div>
   );
 }
