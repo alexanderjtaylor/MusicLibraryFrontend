@@ -29,7 +29,7 @@ function App() {
   return (
     <div>
       <div className='border-box'>
-        <h3 className='music-title'>Music Library</h3>
+        <h3 className='music-title'>Welcome to the Music Library</h3>
         <SearchBar songs = {songs} setSongs = {setSongs}/>
         <DisplayMusic songs = {songs} getAllSongs = {getAllSongs}/>
         <h3 className='add-title'>Add to Library</h3>
