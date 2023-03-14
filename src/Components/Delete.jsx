@@ -3,7 +3,7 @@ import axios from 'axios';
 const Delete = (props) => {
 
     async function deleteSong(){
-        const response = await axios.delete(`http://cors-everywhere-me.herokuapp.com/http://musiclibrary1-env.eba-n7wfm2rn.us-east-2.elasticbeanstalk.com/music/${props.songId}/`)
+        const response = await axios.delete(`https://cors-anywhere.herokuapp.com/http://musiclibrary1-env.eba-n7wfm2rn.us-east-2.elasticbeanstalk.com/music/${props.songId}/`)
         console.log(response.data)
         props.getAllSongs()
     }

@@ -15,13 +15,13 @@ function App() {
   }, []);
 
   async function getAllSongs(){
-    const response = await axios.get('http://cors-everywhere-me.herokuapp.com/http://musiclibrary1-env.eba-n7wfm2rn.us-east-2.elasticbeanstalk.com/music/')
+    const response = await axios.get('https://cors-anywhere.herokuapp.com/http://musiclibrary1-env.eba-n7wfm2rn.us-east-2.elasticbeanstalk.com/music/')
     console.log(response.data)
     setSongs(response.data)
   }
 
   async function postNewSong(newSong){
-    const response = await axios.post('http://cors-everywhere-me.herokuapp.com/http://musiclibrary1-env.eba-n7wfm2rn.us-east-2.elasticbeanstalk.com/music/', newSong)
+    const response = await axios.post('https://cors-anywhere.herokuapp.com/http://musiclibrary1-env.eba-n7wfm2rn.us-east-2.elasticbeanstalk.com/music/', newSong)
     console.log(response.data)
     getAllSongs()
   }
