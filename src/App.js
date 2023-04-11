@@ -15,13 +15,13 @@ function App() {
   }, []);
 
   async function getAllSongs(){
-    const response = await axios.get('https://test-proxy.megancindric.workers.dev/?targetUrl=http://musiclibrary1-env.eba-n7wfm2rn.us-east-2.elasticbeanstalk.com/music/')
+    const response = await axios.get('http://127.0.0.1:8000/music/')
     console.log(response.data)
     setSongs(response.data)
   }
 
   async function postNewSong(newSong){
-    const response = await axios.post('https://test-proxy.megancindric.workers.dev/?targetUrl=/http://musiclibrary1-env.eba-n7wfm2rn.us-east-2.elasticbeanstalk.com/music/', newSong)
+    const response = await axios.post('http://127.0.0.1:8000/music/', newSong)
     console.log(response.data)
     getAllSongs()
   }
